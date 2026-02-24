@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="fit04.local" name="ElevatorSystem.Person_ESTest" skipped="0" tests="18" time="0.048" timestamp="2021-02-06T11:10:38">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="hamcrest.jar" value="/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/hamcrest-core-1.3.jar" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="os.name" value="Linux" />
+    <property name="sun.boot.class.path" value="/opt/local/java/jdk1.8.0_112/jre/lib/resources.jar:/opt/local/java/jdk1.8.0_112/jre/lib/rt.jar:/opt/local/java/jdk1.8.0_112/jre/lib/sunrsasign.jar:/opt/local/java/jdk1.8.0_112/jre/lib/jsse.jar:/opt/local/java/jdk1.8.0_112/jre/lib/jce.jar:/opt/local/java/jdk1.8.0_112/jre/lib/charsets.jar:/opt/local/java/jdk1.8.0_112/jre/lib/jfr.jar:/opt/local/java/jdk1.8.0_112/jre/classes" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7/" />
+    <property name="java.runtime.version" value="1.8.0_112-b15" />
+    <property name="user.name" value="hieuvd" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="/opt/local/java/jdk1.8.0_112/jre/lib/amd64" />
+    <property name="ant.project.default-target" value="test" />
+    <property name="ant.project.name" value="batch_junit" />
+    <property name="java.version" value="1.8.0_112" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="java.endorsed.dirs" value="/opt/local/java/jdk1.8.0_112/jre/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="ant.file.batch_junit" value="/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7.cloned.1612609557/batch_junit_build.xml" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="52.0" />
+    <property name="src" value="/home/hieuvd/spl_dataset_generation/InputPreparation/new_projects/4wise-Elevator-FH-JML/variants/model_m_ca4_0002/src" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="/opt/local/java/jdk1.8.0_112/jre" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7.cloned.1612609557/batch_junit_build.xml" />
+    <property name="os.version" value="3.10.0-693.11.1.el7.x86_64" />
+    <property name="ant.file.type.batch_junit" value="file" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="25.112-b15" />
+    <property name="ant.library.dir" value="/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7//lib" />
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
+    <property name="lib_path" value="" />
+    <property name="user.home" value="/home/hieuvd" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="test" value="/home/hieuvd/spl_dataset_generation/InputPreparation/new_projects/4wise-Elevator-FH-JML/variants/model_m_ca4_0002/test" />
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib" />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7.cloned.1612609557/junittestcases5237201216119088237.properties skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/hieuvd/spl_dataset_generation/InputPreparation/new_projects/4wise-Elevator-FH-JML/variants/model_m_ca4_0002/build/test/IGNORETHIS.xml crashfile=/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7.cloned.1612609557/junitvmwatcher6793085155427215882.properties propsfile=/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7.cloned.1612609557/junit7497205462299929624.properties" />
+    <property name="java.class.path" value="/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7.cloned.1612609557:/home/hieuvd/spl_dataset_generation/InputPreparation/new_projects/4wise-Elevator-FH-JML/variants/model_m_ca4_0002/build/main:/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/junit-4.12.jar:/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/hamcrest-core-1.3.jar:/home/hieuvd/spl_dataset_generation/InputPreparation/new_projects/4wise-Elevator-FH-JML/variants/model_m_ca4_0002/build/test:/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/evosuite-1.0.6.jar:/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7/lib/ant-launcher.jar:/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7/lib/ant.jar:/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7/lib/ant-junit.jar:/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7/lib/ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.7 compiled on September 1 2019" />
+    <property name="build.testclasses" value="/home/hieuvd/spl_dataset_generation/InputPreparation/new_projects/4wise-Elevator-FH-JML/variants/model_m_ca4_0002/build/test" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="junit.jar" value="/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/junit-4.12.jar" />
+    <property name="build.classes" value="/home/hieuvd/spl_dataset_generation/InputPreparation/new_projects/4wise-Elevator-FH-JML/variants/model_m_ca4_0002/build/main" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="java.io.tmpdir" value="/tmp" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="evosuite.jar" value="/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/evosuite-1.0.6.jar" />
+    <property name="os.arch" value="amd64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="java.ext.dirs" value="/opt/local/java/jdk1.8.0_112/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="user.dir" value="/home/hieuvd/spl_dataset_generation/InputPreparation" />
+    <property name="junit.haltonfailure" value="no" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7.cloned.1612609557" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="ant.core.lib" value="/home/hieuvd/spl_dataset_generation/InputPreparation/plugins/apache-ant-1.10.7/lib/ant.jar" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="ant.project.invoked-targets" value="batchtest.all" />
+  </properties>
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test00" time="0.003" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test11" time="0.001" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test01" time="0.0" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test12" time="0.002" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test10" time="0.001" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test04" time="0.0" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test15" time="0.002" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test05" time="0.0" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test16" time="0.002" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test02" time="0.003" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test13" time="0.001" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test03" time="0.001" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test14" time="0.003" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test08" time="0.0" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test09" time="0.002" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test06" time="0.003" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test17" time="0.002" />
+  <testcase classname="ElevatorSystem.Person_ESTest" name="test07" time="0.002" />
+  <system-out><![CDATA[18:10:38.713 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Seeing class for first time: ElevatorSystem.Person_ESTest
+18:10:38.713 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Instrumenting class 'ElevatorSystem.Person_ESTest'.
+18:10:38.714 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Seeing class for first time: ElevatorSystem.Person_ESTest_scaffolding
+18:10:38.714 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Instrumenting class 'ElevatorSystem.Person_ESTest_scaffolding'.
+18:10:38.715 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Keeping class: ElevatorSystem.Person_ESTest_scaffolding
+18:10:38.715 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Keeping class: ElevatorSystem.Person_ESTest
+18:10:38.718 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Seeing class for first time: ElevatorSystem.Floor
+18:10:38.718 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Instrumenting class 'ElevatorSystem.Floor'.
+18:10:38.719 [main] INFO  o.e.r.i.MethodCallReplacementClassAdapter - Adding mock interface to class ElevatorSystem/Floor
+18:10:38.719 [main] INFO  o.e.r.i.CreateClassResetClassAdapter - Creating brand-new static initializer in class ElevatorSystem/Floor
+18:10:38.719 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Keeping class: ElevatorSystem.Floor
+18:10:38.719 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Seeing class for first time: ElevatorSystem.Person
+18:10:38.719 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Instrumenting class 'ElevatorSystem.Person'.
+18:10:38.720 [main] INFO  o.e.r.i.MethodCallReplacementClassAdapter - Adding mock interface to class ElevatorSystem/Person
+18:10:38.720 [main] INFO  o.e.r.i.CreateClassResetClassAdapter - Creating brand-new static initializer in class ElevatorSystem/Person
+18:10:38.720 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Keeping class: ElevatorSystem.Person
+18:10:38.720 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Seeing class for first time: ElevatorSystem.Elevator$Direction$2
+18:10:38.720 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Instrumenting class 'ElevatorSystem.Elevator$Direction$2'.
+18:10:38.721 [main] INFO  o.e.r.i.MethodCallReplacementClassAdapter - Adding mock interface to class ElevatorSystem/Elevator$Direction$2
+18:10:38.721 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Seeing class for first time: ElevatorSystem.Elevator$Direction
+18:10:38.721 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Instrumenting class 'ElevatorSystem.Elevator$Direction'.
+18:10:38.721 [main] INFO  o.e.r.i.MethodCallReplacementClassAdapter - Adding mock interface to class ElevatorSystem/Elevator$Direction
+18:10:38.721 [main] INFO  o.e.r.i.CreateClassResetClassAdapter - Found static initializer in class ElevatorSystem/Elevator$Direction
+18:10:38.722 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Keeping class: ElevatorSystem.Elevator$Direction
+18:10:38.722 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Keeping class: ElevatorSystem.Elevator$Direction$2
+18:10:38.722 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Seeing class for first time: ElevatorSystem.Elevator$Direction$1
+18:10:38.722 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Instrumenting class 'ElevatorSystem.Elevator$Direction$1'.
+18:10:38.722 [main] INFO  o.e.r.i.MethodCallReplacementClassAdapter - Adding mock interface to class ElevatorSystem/Elevator$Direction$1
+18:10:38.722 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Keeping class: ElevatorSystem.Elevator$Direction$1
+18:10:38.722 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Seeing class for first time: ElevatorSystem.Elevator
+18:10:38.722 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Instrumenting class 'ElevatorSystem.Elevator'.
+18:10:38.723 [main] INFO  o.e.r.i.MethodCallReplacementClassAdapter - Adding mock interface to class ElevatorSystem/Elevator
+18:10:38.724 [main] INFO  o.e.r.i.CreateClassResetClassAdapter - Creating brand-new static initializer in class ElevatorSystem/Elevator
+18:10:38.724 [main] INFO  o.e.r.i.CreateClassResetClassAdapter - Adding bytecode for initializing field maximumWeight
+18:10:38.724 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Keeping class: ElevatorSystem.Elevator
+18:10:38.724 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Seeing class for first time: ElevatorSystem.Elevator$DoorState
+18:10:38.724 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Instrumenting class 'ElevatorSystem.Elevator$DoorState'.
+18:10:38.725 [main] INFO  o.e.r.i.MethodCallReplacementClassAdapter - Adding mock interface to class ElevatorSystem/Elevator$DoorState
+18:10:38.725 [main] INFO  o.e.r.i.CreateClassResetClassAdapter - Found static initializer in class ElevatorSystem/Elevator$DoorState
+18:10:38.725 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Keeping class: ElevatorSystem.Elevator$DoorState
+18:10:38.725 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Seeing class for first time: ElevatorSystem.Environment
+18:10:38.725 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Instrumenting class 'ElevatorSystem.Environment'.
+18:10:38.726 [main] INFO  o.e.r.i.MethodCallReplacementClassAdapter - Adding mock interface to class ElevatorSystem/Environment
+18:10:38.726 [main] INFO  o.e.r.i.CreateClassResetClassAdapter - Creating brand-new static initializer in class ElevatorSystem/Environment
+18:10:38.726 [main] INFO  o.e.r.instrumentation.EvoClassLoader - Keeping class: ElevatorSystem.Environment
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
