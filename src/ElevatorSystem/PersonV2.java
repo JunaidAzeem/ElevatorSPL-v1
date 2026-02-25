@@ -1,6 +1,6 @@
 package ElevatorSystem; 
 
-public  class  Person {
+public  class  PersonV2 {
 	
 
 	private int weight;
@@ -31,7 +31,7 @@ public  class  Person {
 	
 
 	//__feature_mapping__ [Base] [19:26]
-	public Person(String name, int weight, int origin, int destination, Environment env) {
+	public PersonV2(String name, int weight, int origin, int destination, EnvironmentV2 env) {
 		super();
 		this.name = name;
 		this.weight = weight;
@@ -77,7 +77,7 @@ public  class  Person {
 	
 	
 	//__feature_mapping__ [Base] [47:50]
-	public void enterElevator(Elevator e) {
+	public void enterElevator(ElevatorV2 e) {
 		
 		e.pressInLiftFloorButton(destination);
 	}

@@ -4,10 +4,10 @@ import TestSpecifications.SpecificationException;
 
 import TestSpecifications.SpecificationManager; 
 
-import ElevatorSystem.Elevator; 
-import ElevatorSystem.Environment; 
-import ElevatorSystem.EvilPerson; 
-import ElevatorSystem.Person; 
+import ElevatorSystem.ElevatorV2; 
+import ElevatorSystem.EnvironmentV2; 
+import ElevatorSystem.EvilPersonV2; 
+import ElevatorSystem.PersonV2; 
 import java.util.List; 
 import java.util.ArrayList; 
 import java.lang.Throwable; 
@@ -135,22 +135,22 @@ public   class  PL_Interface_impl  implements PL_Interface {
 
 	
 
-	Environment env;
+	EnvironmentV2 env;
 
 	
 	
 	//__feature_mapping__ [Base] [96:147]
 	public void randomSequenceOfActions(int maxLength) {
 		cleanupTimeShifts=6 * maxLength; // tests have shown that this is enough
-		env = new Environment(NUM_FLOORS);
-		Elevator e;
+		env = new EnvironmentV2(NUM_FLOORS);
+		ElevatorV2 e;
 		if (getBoolean()) {
 			// elevator from 0 going up
-			e = new Elevator(env, verbose);
+			e = new ElevatorV2(env, verbose);
 			actionHistory.add("StartFromBottom");
 		} else {
 			// elevator from 4 going down
-			e = new Elevator(env, verbose, 4, false);
+			e = new ElevatorV2(env, verbose, 4, false);
 			actionHistory.add("StartFromTop");
 		}
 		Actions a = new Actions(env, e);
@@ -197,15 +197,15 @@ public   class  PL_Interface_impl  implements PL_Interface {
 	
 	//__feature_mapping__ [Base] [149:202]
 	public void modifiedrandomSequenceOfActions(int maxLength) {
-		env = new Environment(NUM_FLOORS);
-		Elevator e;
+		env = new EnvironmentV2(NUM_FLOORS);
+		ElevatorV2 e;
 		if (getBoolean()) {
 			// elevator from 0 going up
-			e = new Elevator(env, verbose);
+			e = new ElevatorV2(env, verbose);
 			actionHistory.add("StartFromBottom");
 		} else {
 			// elevator from 4 going down
-			e = new Elevator(env, verbose, 4, false);
+			e = new ElevatorV2(env, verbose, 4, false);
 			actionHistory.add("StartFromTop");
 		}
 		Actions a = new Actions(env, e);
@@ -255,8 +255,8 @@ public   class  PL_Interface_impl  implements PL_Interface {
 	
 	//__feature_mapping__ [Base] [204:213]
 	public void Specification1() {
-		env = new Environment(5);
-		Elevator e = new Elevator(env, false);
+		env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false);
 		Actions a = new Actions(env, e);
 
 		a.bigMacCall();
@@ -268,8 +268,8 @@ public   class  PL_Interface_impl  implements PL_Interface {
 	
 	//__feature_mapping__ [Base] [214:222]
 	public void Specification2() {
-		env = new Environment(5);
-		Elevator e = new Elevator(env, false);
+		env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false);
 		Actions a = new Actions(env, e);
 
 		a.bigMacCall();
@@ -280,11 +280,11 @@ public   class  PL_Interface_impl  implements PL_Interface {
 	
 	//__feature_mapping__ [Base] [223:241]
 	public void Specification3() {
-		env = new Environment(5);
-		Elevator e = new Elevator(env, false, 4, false);
+		env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false, 4, false);
 		Actions a = new Actions(env, e);
 
-		Person bob = a.bobCall();
+		PersonV2 bob = a.bobCall();
 		while (env.getFloor(bob.getOrigin()).hasCall())
 			e.timeShift();
 		// bob has been picked up in executive Suite
@@ -302,8 +302,8 @@ public   class  PL_Interface_impl  implements PL_Interface {
 	
 	//__feature_mapping__ [Base] [242:250]
 	public void Specification9() {
-		env = new Environment(5);
-		Elevator e = new Elevator(env, false);
+		env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false);
 		Actions a = new Actions(env, e);
 
 		a.bigMacCall();
@@ -314,12 +314,12 @@ public   class  PL_Interface_impl  implements PL_Interface {
 	
 	//__feature_mapping__ [Base] [251:264]
 	public void Specification13() {
-		env = new Environment(5);
-		Elevator e = new Elevator(env, false);
+		env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false);
 		Actions a = new Actions(env, e);
 
 		a.aliceCall();
-		Person angelina = a.angelinaCall();
+		PersonV2 angelina = a.angelinaCall();
 		while (env.getFloor(angelina.getOrigin()).hasCall()) {
 			e.timeShift();
 		}
@@ -331,11 +331,11 @@ public   class  PL_Interface_impl  implements PL_Interface {
 	
 	//__feature_mapping__ [Base] [265:278]
 	public void Specification14() {
-		env = new Environment(5);
-		Elevator e = new Elevator(env, false);
+		env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false);
 		Actions a = new Actions(env, e);
 
-		Person bm = a.bigMacCall();
+		PersonV2 bm = a.bigMacCall();
 
 		while (env.getFloor(bm.getOrigin()).hasCall()) {
 			e.timeShift();

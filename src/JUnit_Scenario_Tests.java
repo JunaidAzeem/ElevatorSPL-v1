@@ -3,9 +3,9 @@
 import org.junit.Before; 
 import org.junit.Test;  
 
-import ElevatorSystem.Elevator;  
-import ElevatorSystem.Environment;  
-import ElevatorSystem.Person;  
+import ElevatorSystem.ElevatorV2;  
+import ElevatorSystem.EnvironmentV2;  
+import ElevatorSystem.PersonV2;  
 import TestSpecifications.SpecificationException;  
 import TestSpecifications.SpecificationManager;  
 
@@ -39,7 +39,7 @@ public    class   JUnit_Scenario_Tests {
 	  @ ensures (\forall int i; 0 <= i && i < env.calledAt_Spec2.length; !env.calledAt_Spec2[i]);
 	  @*/
 	//__feature_mapping__ [Base] [35:37]
-	 private void  testFinished__wrappee__Base(Environment env) {
+	 private void  testFinished__wrappee__Base(EnvironmentV2 env) {
 
 	}
 
@@ -54,7 +54,7 @@ public    class   JUnit_Scenario_Tests {
 	  @ ensures (\forall int i; 0 <= i && i < env.calledAt_Spec9.length; !env.calledAt_Spec9[i]);
 	  @*/
 	//__feature_mapping__ [Empty] [22:24]
-	public void testFinished(Environment env) {
+	public void testFinished(EnvironmentV2 env) {
 		testFinished__wrappee__Base(env);
 	}
 
@@ -64,8 +64,8 @@ public    class   JUnit_Scenario_Tests {
 	@Test(expected = SpecificationException.class)
 	public void Specification1() {
 		SpecificationManager.checkOnlySpecification(1);
-		Environment env = new Environment(5);
-		Elevator e = new Elevator(env, false);
+		EnvironmentV2 env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false);
 		Actions a = new Actions(env, e);
 
 		a.bigMacCall();
@@ -83,8 +83,8 @@ public    class   JUnit_Scenario_Tests {
 	@Test(expected = SpecificationException.class)
 	public void Specification2() {
 		SpecificationManager.checkOnlySpecification(2);
-		Environment env = new Environment(5);
-		Elevator e = new Elevator(env, false);
+		EnvironmentV2 env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false);
 		Actions a = new Actions(env, e);
 
 		a.bigMacCall();
@@ -101,11 +101,11 @@ public    class   JUnit_Scenario_Tests {
 	@Test(expected = SpecificationException.class)
 	public void Specification3() {
 		SpecificationManager.checkOnlySpecification(3);
-		Environment env = new Environment(5);
-		Elevator e = new Elevator(env, false, 4, false);
+		EnvironmentV2 env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false, 4, false);
 		Actions a = new Actions(env, e);
 
-		Person bob = a.bobCall();
+		PersonV2 bob = a.bobCall();
 		while (env.getFloor(bob.getOrigin()).hasCall())
 			e.timeShift();
 		// bob has been picked up in executive Suite
@@ -134,8 +134,8 @@ public    class   JUnit_Scenario_Tests {
 	@Test(expected = SpecificationException.class)
 	public void Specification9() {
 		SpecificationManager.checkOnlySpecification(9);
-		Environment env = new Environment(5);
-		Elevator e = new Elevator(env, false);
+		EnvironmentV2 env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false);
 		Actions a = new Actions(env, e);
 
 		a.bigMacCall();
@@ -156,12 +156,12 @@ public    class   JUnit_Scenario_Tests {
 	@Test(expected = SpecificationException.class)
 	public void Specification13() {
 		SpecificationManager.checkOnlySpecification(13);
-		Environment env = new Environment(5);
-		Elevator e = new Elevator(env, false);
+		EnvironmentV2 env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false);
 		Actions a = new Actions(env, e);
 
 		a.aliceCall();
-		Person angelina = a.angelinaCall();
+		PersonV2 angelina = a.angelinaCall();
 		while (env.getFloor(angelina.getOrigin()).hasCall()) {
 			e.timeShift();
 		}
@@ -179,11 +179,11 @@ public    class   JUnit_Scenario_Tests {
 	@Test(expected = SpecificationException.class)
 	public void Specification14() {
 		SpecificationManager.checkOnlySpecification(14);
-		Environment env = new Environment(5);
-		Elevator e = new Elevator(env, false);
+		EnvironmentV2 env = new EnvironmentV2(5);
+		ElevatorV2 e = new ElevatorV2(env, false);
 		Actions a = new Actions(env, e);
 
-		Person bm = a.bigMacCall();
+		PersonV2 bm = a.bigMacCall();
 
 		while (env.getFloor(bm.getOrigin()).hasCall()) {
 			e.timeShift();

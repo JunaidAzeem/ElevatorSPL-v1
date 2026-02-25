@@ -1,7 +1,7 @@
 package ElevatorSystem; 
 
 
-public  class  EvilPerson  extends Person {
+public  class  EvilPersonV2  extends PersonV2 {
 	
 
 	private int[] additionalButtons;
@@ -9,8 +9,8 @@ public  class  EvilPerson  extends Person {
 	
 
 	//__feature_mapping__ [Base] [8:12]
-	public EvilPerson(String name, int weight, int origin, int destination, int[] additionalButtons,
-			Environment env) {
+	public EvilPersonV2(String name, int weight, int origin, int destination, int[] additionalButtons,
+			EnvironmentV2 env) {
 		super(name, weight, origin, destination, env);
 		this.additionalButtons = additionalButtons;
 	}
@@ -19,7 +19,7 @@ public  class  EvilPerson  extends Person {
 	
 	//__feature_mapping__ [Base] [14:19]
 	@Override
-	public void enterElevator(Elevator e) {
+	public void enterElevator(ElevatorV2 e) {
 		super.enterElevator(e);
 		for (Integer btnID : additionalButtons)
 			e.pressInLiftFloorButton(btnID);

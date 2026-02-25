@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays; 
 import java.util.List; 
 
-public   class  Elevator {
+public   class  ElevatorV2 {
 	
 
-	Environment env;
+	EnvironmentV2 env;
 
 	
 
@@ -36,7 +36,7 @@ public   class  Elevator {
 
 	
 
-	private List<Person> persons = new ArrayList<Person>();
+	private List<PersonV2> persons = new ArrayList<PersonV2>();
 
 	
 	 enum  DoorState {open ,  close}
@@ -54,7 +54,7 @@ public   class  Elevator {
 	
 	
 	//__feature_mapping__ [Base] [33:40]
-	public Elevator(Environment env, boolean verbose) {
+	public ElevatorV2(EnvironmentV2 env, boolean verbose) {
 		this.verbose = verbose;
 		this.currentHeading = Direction.up;
 		this.currentFloorID = 0;
@@ -65,7 +65,7 @@ public   class  Elevator {
 
 	
 	//__feature_mapping__ [Base] [41:48]
-	public Elevator(Environment env, boolean verbose, int floor, boolean headingUp) {
+	public ElevatorV2(EnvironmentV2 env, boolean verbose, int floor, boolean headingUp) {
 		this.verbose = verbose;
 		this.currentHeading = (headingUp ? Direction.up : Direction.down);
 		this.currentFloorID = floor;
@@ -84,7 +84,7 @@ public   class  Elevator {
 	
 	
 	//__feature_mapping__ [Base] [54:58]
-	 private void  enterElevator__wrappee__Base(Person p) {
+	 private void  enterElevator__wrappee__Base(PersonV2 p) {
 		persons.add(p);
 		p.enterElevator(this);
 		if (verbose) System.out.println(p.getName() + " entered the Elevator at Landing " + this.getCurrentFloorID() + ", going to " + p.getDestination());
@@ -92,7 +92,7 @@ public   class  Elevator {
 
 	
 	//__feature_mapping__ [Weight] [18:21]
-	public void enterElevator(Person p) {
+	public void enterElevator(PersonV2 p) {
 		enterElevator__wrappee__Base(p);
 		weight+=p.getWeight();
 	}
@@ -100,7 +100,7 @@ public   class  Elevator {
 	
 	
 	//__feature_mapping__ [Base] [60:67]
-	 private boolean  leaveElevator__wrappee__Base(Person p) {
+	 private boolean  leaveElevator__wrappee__Base(PersonV2 p) {
 		if (persons.contains(p)) {
 			persons.remove(p);
 			p.leaveElevator();
@@ -112,7 +112,7 @@ public   class  Elevator {
 	
 	
 	//__feature_mapping__ [Weight] [12:17]
-	 private boolean  leaveElevator__wrappee__Weight(Person p) {
+	 private boolean  leaveElevator__wrappee__Weight(PersonV2 p) {
 		if (leaveElevator__wrappee__Base(p)) {
 			weight-=p.getWeight();
 			return true;
@@ -121,7 +121,7 @@ public   class  Elevator {
 
 	
 	//__feature_mapping__ [Empty] [8:14]
-	public boolean leaveElevator(Person p) { // empty
+	public boolean leaveElevator(PersonV2 p) { // empty
 		if (leaveElevator__wrappee__Weight(p)) {
 			if (this.persons.isEmpty())
 				Arrays.fill(this.floorButtons, false);
@@ -194,7 +194,7 @@ public   class  Elevator {
 			//System.out.println("Arriving at " +  currentFloorID + ", Doors opening");
 			doors = DoorState.open;
 			// iterate over a copy of the original list, avoids concurrent modification exception
-			for (Person p: new ArrayList<Person>(persons)) {
+			for (PersonV2 p: new ArrayList<PersonV2>(persons)) {
 				if (p.getDestination() == currentFloorID) {
 					leaveElevator(p);					
 				}
@@ -341,7 +341,7 @@ public   class  Elevator {
 	
 	//__feature_mapping__ [Base] [169:186]
 	 private boolean  stopRequestedInDirection__wrappee__Base (Direction dir, boolean respectFloorCalls, boolean respectInLiftCalls) {
-		Floor[] floors = env.getFloors();
+		FloorV2[] floors = env.getFloors();
 		if (dir == Direction.up) {
 			if (env.isTopFloor(currentFloorID)) return false;
 			for (int i = currentFloorID+1; i < floors.length; i++) {
@@ -383,7 +383,7 @@ public   class  Elevator {
 	
 	//__feature_mapping__ [Base] [187:194]
 	private boolean anyStopRequested () {
-		Floor[] floors = env.getFloors();
+		FloorV2[] floors = env.getFloors();
 		for (int i = 0; i < floors.length; i++) {
 			if (floors[i].hasCall()) return true;
 			else if (this.floorButtons[i]) return true; 
@@ -407,7 +407,7 @@ public   class  Elevator {
 
 	
 	//__feature_mapping__ [Base] [203:205]
-	public Environment getEnv() {
+	public EnvironmentV2 getEnv() {
 		return env;
 	}
 
@@ -453,7 +453,7 @@ public   class  Elevator {
 
 	//__feature_mapping__ [ExecutiveFloor] [14:18]
 	public /*@pure@*/  boolean isExecutiveFloorCalling() {
-		for (Floor f : env.floors) 
+		for (FloorV2 f : env.floors) 
 			if (f.getFloorID() == executiveFloor && f.hasCall()) return true;
 		return false;
 	}

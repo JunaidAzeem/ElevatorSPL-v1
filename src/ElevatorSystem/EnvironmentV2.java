@@ -1,6 +1,6 @@
 package ElevatorSystem; 
 
-public   class  Environment {
+public   class  EnvironmentV2 {
 	
 	
 	/* Specification 1:
@@ -13,7 +13,7 @@ public   class  Environment {
 	 */
 	/*@ model boolean[] calledAt_Spec2; @*/
 		
-	Floor[] floors;
+	FloorV2[] floors;
 
 	
 	
@@ -25,32 +25,32 @@ public   class  Environment {
 	/*@ model boolean[] calledAt_Spec9; @*/
 	
 	//__feature_mapping__ [Base] [21:28]
-	public Environment(int numFloors) {
+	public EnvironmentV2(int numFloors) {
 		/*@ set calledAt_Spec1 = new boolean[numFloors]; @*/
 		/*@ set calledAt_Spec2 = new boolean[numFloors]; @*/
-		floors = new Floor[numFloors];
+		floors = new FloorV2[numFloors];
 		for (int i = 0; i < numFloors; i++) {
-			floors[i] = new Floor(this, i);
+			floors[i] = new FloorV2(this, i);
 		}
 	
 //__feature_mapping__ [Empty] [12:17]
 	
-		floors = new Floor[numFloors];
+		floors = new FloorV2[numFloors];
 		for (int i = 0; i < numFloors; i++) {
-			floors[i] = new Floor(this, i);
+			floors[i] = new FloorV2(this, i);
 		}
 	}
 
 	
 	
 	//__feature_mapping__ [Empty] [19:21]
-	public Floor getFloor(int id) {
+	public FloorV2 getFloor(int id) {
 		return floors[id];
 	}
 
 	
 	//__feature_mapping__ [Empty] [22:24]
-	public Floor[] getFloors() {
+	public FloorV2[] getFloors() {
 		return floors;
 	}
 

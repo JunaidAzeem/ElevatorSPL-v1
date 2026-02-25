@@ -3,7 +3,7 @@ package ElevatorSystem;
 import java.util.ArrayList; 
 import java.util.List; 
 
-public  class  Floor {
+public  class  FloorV2 {
 	
 
 	private final int thisFloorID;
@@ -14,16 +14,16 @@ public  class  Floor {
 
 	
 
-	private List<Person> waiting = new ArrayList<Person>();
+	private List<PersonV2> waiting = new ArrayList<PersonV2>();
 
 	
 	
-	private Environment env;
+	private EnvironmentV2 env;
 
 	
 	
 	//__feature_mapping__ [Base] [16:19]
-	public Floor(Environment env, int id) {
+	public FloorV2(EnvironmentV2 env, int id) {
 		this.env = env;
 		thisFloorID = id;
 	}
@@ -63,8 +63,8 @@ public  class  Floor {
 	
 	
 	//__feature_mapping__ [Base] [41:47]
-	public void processWaitingPersons(Elevator e) {
-		for (Person p : waiting) {
+	public void processWaitingPersons(ElevatorV2 e) {
+		for (PersonV2 p : waiting) {
 			e.enterElevator(p);
 		}
 		waiting.clear();
@@ -74,7 +74,7 @@ public  class  Floor {
 	
 	
 	//__feature_mapping__ [Base] [49:52]
-	public void addWaitingPerson(Person person) {
+	public void addWaitingPerson(PersonV2 person) {
 		waiting.add(person);
 		callElevator();
 	}

@@ -1,22 +1,22 @@
  
 
-import ElevatorSystem.Elevator; 
-import ElevatorSystem.Environment; 
-import ElevatorSystem.Person; 
+import ElevatorSystem.ElevatorV2; 
+import ElevatorSystem.EnvironmentV2; 
+import ElevatorSystem.PersonV2; 
 
 public  class  Actions {
 	
 
-	Environment env;
+	EnvironmentV2 env;
 
 	
 
-	Elevator e;
+	ElevatorV2 e;
 
 	
 
 	//__feature_mapping__ [Base] [13:20]
-	public Actions(Environment env, Elevator e) {
+	public Actions(EnvironmentV2 env, ElevatorV2 e) {
 		super();
 		if (env.getFloors().length < 5)
 			throw new IllegalArgumentException(
@@ -33,43 +33,43 @@ public  class  Actions {
 	 * floor 0: monica
 	 */
 	//__feature_mapping__ [Base] [27:29]
-	public Person bobCall() {
-		return new Person("bob", 40, 4, 0, env);
+	public PersonV2 bobCall() {
+		return new PersonV2("bob", 40, 4, 0, env);
 	}
 
 	
 
 	//__feature_mapping__ [Base] [31:33]
-	public Person aliceCall() {
-		return new Person("alice", 40, 3, 0, env);
+	public PersonV2 aliceCall() {
+		return new PersonV2("alice", 40, 3, 0, env);
 	}
 
 	
 
 	//__feature_mapping__ [Base] [35:37]
-	public Person angelinaCall() {
-		return new Person("angelina", 40, 2, 1, env);
+	public PersonV2 angelinaCall() {
+		return new PersonV2("angelina", 40, 2, 1, env);
 	}
 
 	
 
 	//__feature_mapping__ [Base] [39:41]
-	public Person chuckCall() {
-		return new Person("chuck", 40, 1, 3, env);
+	public PersonV2 chuckCall() {
+		return new PersonV2("chuck", 40, 1, 3, env);
 	}
 
 	
 
 	//__feature_mapping__ [Base] [43:45]
-	public Person monicaCall() {
-		return new Person("monica", 30, 0, 1, env);
+	public PersonV2 monicaCall() {
+		return new PersonV2("monica", 30, 0, 1, env);
 	}
 
 	
 
 	//__feature_mapping__ [Base] [47:49]
-	public Person bigMacCall() {
-		return new Person("BigMac", 150, 1, 3, env);
+	public PersonV2 bigMacCall() {
+		return new PersonV2("BigMac", 150, 1, 3, env);
 	}
 
 	
